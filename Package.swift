@@ -13,7 +13,7 @@ let package = Package(
         .library(name: "FluentMongoDriver", targets: ["FluentMongoDriver"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/vapor/fluent-kit.git", from: "1.37.0"),
+        .package(url: "https://github.com/finestructure/fluent-kit.git", revision: "36d1ee866b2a8deb6c4db978bffee0573740e616"),
         .package(url: "https://github.com/orlandos-nl/MongoKitten.git", from: "6.7.13"),
         .package(url: "https://github.com/orlandos-nl/DNSClient.git", exact: "2.3.0"),
     ],

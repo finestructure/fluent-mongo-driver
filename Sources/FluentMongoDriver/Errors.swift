@@ -6,18 +6,21 @@ import Foundation
 extension MongoWriteError: DatabaseError {
     public var isSyntaxError: Bool { false }
     public var isConstraintFailure: Bool { false }
+    public var isUniqueViolation: Bool { false }
     public var isConnectionClosed: Bool { false }
 }
 
 extension MongoError: DatabaseError {
     public var isSyntaxError: Bool { false }
     public var isConstraintFailure: Bool { false }
+    public var isUniqueViolation: Bool { false }
     public var isConnectionClosed: Bool { false }
 }
 
 public enum FluentMongoError: Error, DatabaseError {
     public var isSyntaxError: Bool { false }
     public var isConstraintFailure: Bool { false }
+    public var isUniqueViolation: Bool { false }
     public var isConnectionClosed: Bool { false }
     
     case missingHosts
